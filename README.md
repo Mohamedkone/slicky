@@ -1,4 +1,4 @@
-# sneaky
+# Slicky
 ## Date: 02/07/2021
 ### By: **Mohamed Kone**
 
