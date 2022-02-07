@@ -1,7 +1,6 @@
-import logo from './logo.svg';
-import './App.css';
+import './style/App.css';
 
-import firebase from 'firebase/app'
+import firebase from 'firebase/compat/app'
 import 'firebase/firestore'
 import 'firebase/auth'
 import { useAuthState } from 'react-firebase-hooks/auth'
