@@ -29,14 +29,10 @@ function App() {
   const main = user ? <Chat firestore={firestore} /> : <SignIn auth={auth}/>
   return (
     <div className="App">
-      <header>
-        <h1>Conversation</h1>
         <SignOut auth = {auth}/>
-      </header>
 
-      <section>
         {main}
-      </section>
+ 
 
     </div>
   );
