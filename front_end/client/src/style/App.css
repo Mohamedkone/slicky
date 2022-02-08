@@ -36,6 +36,9 @@ nav img {
   place-items: center;
   margin: auto;
 }
+.option1 img{
+  max-width: 2em;
+}
 
 /* Cards */
 .c{
