@@ -1,10 +1,14 @@
 import './style/App.css';
+import { useState } from 'react';
+import SignIn from './pages/SignIn'
+import Chat from './components/Chat'
+import SignOut from './components/SignOut'
+import firebase from 'firebase/app';
+import 'firebase/firestore';
+import 'firebase/auth';
 
-import firebase from 'firebase/compat/app'
-import 'firebase/firestore'
-import 'firebase/auth'
-import { useAuthState } from 'react-firebase-hooks/auth'
-import { useCollectionData } from 'react-firebase-hooks/firestore'
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { useCollectionData } from 'react-firebase-hooks/firestore';
 
 firebase.initializeApp({
   apiKey: "AIzaSyCAbFmgXlgfntlxF-oQN4R1v6Jw6pctPwQ",
@@ -14,17 +18,33 @@ firebase.initializeApp({
   messagingSenderId: "530037546067",
   appId: "1:530037546067:web:3ff0be8603dbcf23557aa6"
 })
-const auth = firebase.auth()
-const firestore = firebase.firestore()
+
+const auth = firebase.auth();
+const firestore = firebase.firestore();
+
 
 function App() {
+
+  const [user] = useAuthState(auth);
+  const main = user ? <Chat firestore={firestore} /> : <SignIn auth={auth}/>
   return (
     <div className="App">
-      <header className="App-header">
-       
+      <header>
+        <h1>Conversation</h1>
+        <SignOut auth = {auth}/>
       </header>
+
+      <section>
+        {main}
+      </section>
+
     </div>
   );
 }
 
+
+
+
+
 export default App;
+
