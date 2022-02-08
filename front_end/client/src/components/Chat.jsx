@@ -20,7 +20,18 @@ function Chat(props) {
         createdAt: firebase.firestore.FieldValue.serverTimestamp(),
       })
     }
-    return ()
+    return (<>
+      <div>
+  
+        {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} />)}
+  
+      </div>
+      <form onSubmit={sendMessage}>
+        <input value={formValue} onChange={(e)=> setFormValue(e.target.value)} />
+        <button>CLick</button>
+      </form>
+  
+    </>)
   
   
   function ChatMessage(props) {
