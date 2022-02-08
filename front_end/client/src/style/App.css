@@ -87,8 +87,7 @@ background: #B92B2B;
   border-radius: 7.5px;
     
 }
-.c-c-avatar img {
-}
+
 
 .c-2c-name{
   font-family: nova;
@@ -102,4 +101,34 @@ background: #B92B2B;
 }
 .c-2c-time{
   align-self: flex-end;
+}
+
+/* Chat */
+.display-msg{
+  min-height: 85vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+
+}
+.message{
+  background: #ccc;
+  padding: .2rem .5rem;
+  max-width: max(35ch, 50%);
+  height: auto;
+  border-radius: 2rem;
+  margin: .5rem auto;
+}
+.received{
+  margin-right:0 ;
+  background: #B92B2B;
+  color: #fff;
+}
+.sent{
+  margin-left:0 ;
+  background: #E0E0E0;
+  color: #000;
+}
+.message p{
+  
 }

@@ -28,7 +28,7 @@ const firestore = firebase.firestore();
 function App() {
 
   const [user] = useAuthState(auth);
-  const main = user ? <Message auth = {auth} /> : <SignIn auth={auth}/>
+  const main = user ? <Message auth = {auth} firestore={firestore}/> : <SignIn auth={auth}/>
   return (
     <div className="App">
 

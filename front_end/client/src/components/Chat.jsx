@@ -1,5 +1,5 @@
 import { useState } from "react";
-import firebase from "firebase";
+import firebase, { auth } from "firebase";
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
 function Chat(props) {
@@ -10,20 +10,21 @@ function Chat(props) {
   
     const [messages] = useCollectionData(query, { idField: 'id' });
     const [formValue, setFormValue] = useState("")
+    const [lUid, setUid] = useState(props.auth.currentUser.uid)
+    console.log(lUid)
   
     const sendMessage = async(e) =>{
       e.preventDefault()
-      console.log(e)
-      console.log(props.auth)
       await messagesRef.add({
         text: formValue,
+        uid: lUid,
         createdAt: firebase.firestore.FieldValue.serverTimestamp(),
       })
     }
     return (<>
-      <div>
+      <div className="display-msg">
   
-        {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} />)}
+        {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} try={props}/>)}
   
       </div>
       <form onSubmit={sendMessage}>
@@ -36,10 +37,11 @@ function Chat(props) {
   
   function ChatMessage(props) {
     const { text, uid } = props.message;
+    console.log(uid)
+    const messageClass = uid === props.try.auth.currentUser.uid ? 'received' : 'sent'
   
-    // const messageClass = uid === props.auth.currentUser.uid ? 'sent' : 'received'
     return (<>
-        <div className={`message `}>
+        <div className={`message ${messageClass}`}>
           
         <p>{text}</p>
         </div>
