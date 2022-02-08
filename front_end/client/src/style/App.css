@@ -2,27 +2,49 @@
   margin: 0;
   padding: 0;
 }
+@font-face {
+  font-family: nova;
+  src: url(../font/GILLSANSNOVA.TTF);
+}
 
 nav {
   display: flex;
+  position: relative;
   justify-content: space-around;
   align-items: center;
-  height: 8vh;
+  height: 10vh;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+  z-index: 2;
 }
 
 nav img {
   height: 3vh;
 }
+.option1{
+  background: #D4D4D4;
+  padding: .3em .5em;
+  border-radius: 50%;
+}
 
 /* Cards */
+.c{
+  max-height: 90vh;
+  overflow: scroll;
 
+}
 .c-container {
   display: grid;
   grid-template-columns: 1fr 4fr 0.7fr;
   column-gap: 0.5rem;
   justify-content: space-around;
   align-items: center;
+  padding: 1em;
+  background: #fff;
+}
+.c-container:hover{cursor: pointer;}
+.c-container:focus,
+.c-container:active{
+  background: #ccc;
 }
 .c-c-avatar {
   background: #000;
@@ -30,6 +52,15 @@ nav img {
   width: 3rem;
   margin: auto;
   border-radius: 50%;
+}
+.status1::before {
+background: #409e2a;
+}
+.status2::before {
+background: #B9712B;
+}
+.status3::before {
+background: #B92B2B;
 }
 .c-c-avatar::before {
   content: '';
@@ -39,8 +70,21 @@ nav img {
   -moz-border-radius: 7.5px;
   -webkit-border-radius: 7.5px;
   border-radius: 7.5px;
-  background-color: #409e2a;
     
 }
 .c-c-avatar img {
+}
+
+.c-2c-name{
+  font-family: nova;
+  font-weight: 300;
+}
+.c-2c-message, .c-2c-time{
+  font-family: nova;
+  font-weight: 100;
+  font-size: .8em;
+  color: #666;
+}
+.c-2c-time{
+  align-self: flex-end;
 }
