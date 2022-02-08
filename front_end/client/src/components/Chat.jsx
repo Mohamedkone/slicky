@@ -1,6 +1,7 @@
 import { useState } from "react";
 import firebase, { auth } from "firebase";
 import { useCollectionData } from 'react-firebase-hooks/firestore';
+import Asend from '../assets/send.svg'
 
 function Chat(props) {
       
@@ -11,7 +12,6 @@ function Chat(props) {
     const [messages] = useCollectionData(query, { idField: 'id' });
     const [formValue, setFormValue] = useState("")
     const [lUid, setUid] = useState(props.auth.currentUser.uid)
-    console.log(lUid)
   
     const sendMessage = async(e) =>{
       e.preventDefault()
@@ -27,17 +27,18 @@ function Chat(props) {
         {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} try={props}/>)}
   
       </div>
+      <div className="chat-send">
       <form onSubmit={sendMessage}>
-        <input value={formValue} onChange={(e)=> setFormValue(e.target.value)} />
-        <button>CLick</button>
+        <textarea className="msg-i" value={formValue} rows='1' onChange={(e)=> setFormValue(e.target.value)} />
+        <button disabled={ formValue === ""?"disable":""}><img src={Asend} alt="" /></button>
       </form>
+      </div>
   
     </>)
   
   
   function ChatMessage(props) {
     const { text, uid } = props.message;
-    console.log(uid)
     const messageClass = uid === props.try.auth.currentUser.uid ? 'received' : 'sent'
   
     return (<>
