@@ -27,12 +27,11 @@ const firestore = firebase.firestore();
 function App() {
 
   const [user] = useAuthState(auth);
-  const main = user ? <Convo /> : <SignIn auth={auth}/>
+  const main = user ? <Convo auth = {auth} /> : <SignIn auth={auth}/>
   return (
     <div className="App">
 
         {main}
-        <SignOut auth = {auth}/>
  
 
     </div>
