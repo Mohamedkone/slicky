@@ -109,15 +109,21 @@ background: #B92B2B;
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 .message{
   background: #ccc;
   padding: .2rem .5rem;
-  max-width: max(35ch, 50%);
-  height: auto;
   border-radius: 2rem;
   margin: .5rem auto;
+  min-height: 1.5rem;
+  font-size: 1rem;
+  border: none;
+  resize: none;
+  height: auto;
+}
+.message p{
+
 }
 .received{
   margin-right:0 ;

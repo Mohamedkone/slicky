@@ -23,7 +23,6 @@ function Chat(props) {
     }
     return (<>
       <div className="display-msg">
-  
         {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} try={props}/>)}
   
       </div>
@@ -39,12 +38,12 @@ function Chat(props) {
   
   function ChatMessage(props) {
     const { text, uid } = props.message;
+    console.log(text)
     const messageClass = uid === props.try.auth.currentUser.uid ? 'received' : 'sent'
-  
     return (<>
         <div className={`message ${messageClass}`}>
           
-        <p>{text}</p>
+        {text}
         </div>
     </>)
   }
