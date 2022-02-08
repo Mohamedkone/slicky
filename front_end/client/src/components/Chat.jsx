@@ -38,7 +38,6 @@ function Chat(props) {
   
   function ChatMessage(props) {
     const { text, uid } = props.message;
-    console.log(text)
     const messageClass = uid === props.try.auth.currentUser.uid ? 'received' : 'sent'
     return (<>
         <div className={`message ${messageClass}`}>
