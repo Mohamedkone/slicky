@@ -22,14 +22,18 @@ nav img {
 }
 .option1{
   background: #D4D4D4;
-  padding: .3em .5em;
+  min-width: 3rem;
+  min-height: 3rem;
   border-radius: 50%;
+  display: flex;
+  place-content: center center;
+  place-items: center;
 }
 
 /* Cards */
 .c{
   max-height: 90vh;
-  overflow: scroll;
+  overflow-y: scroll;
 
 }
 .c-container {
@@ -44,7 +48,8 @@ nav img {
 .c-container:hover{cursor: pointer;}
 .c-container:focus,
 .c-container:active{
-  background: #ccc;
+  background: #eee;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 .c-c-avatar {
   background: #000;
