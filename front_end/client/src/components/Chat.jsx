@@ -20,9 +20,20 @@ function Chat(props) {
         createdAt: firebase.firestore.FieldValue.serverTimestamp(),
       })
     }
-    return 0
+    return ()
   
-
+  
+  function ChatMessage(props) {
+    const { text, uid } = props.message;
+  
+    // const messageClass = uid === props.auth.currentUser.uid ? 'sent' : 'received'
+    return (<>
+        <div className={`message `}>
+          
+        <p>{text}</p>
+        </div>
+    </>)
+  }
   
   }
   
