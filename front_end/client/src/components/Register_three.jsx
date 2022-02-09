@@ -40,6 +40,7 @@ function Register_three() {
           <label htmlFor="checkbox">Yes, I accept the terms and conditions to use this
           this website or app</label>
           </div>
+          <button className='r-btn r-finish'>Done</button>
       </div>
   )
 }
