@@ -66,7 +66,7 @@ function Register_one() {
                 <input className='r-r-f-import' type="file" name="file"/>
                 <span className="requiered"></span>
             </div>
-            <button className='r-form-next r-btn' type="submit">Next &#8680;</button>
+            
       </form> 
   )
 }
