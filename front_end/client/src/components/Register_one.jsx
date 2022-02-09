@@ -11,17 +11,17 @@ function Register_one() {
     const [password, setPassword] = useState("")
     const [passwordVer, setPasswordVer] = useState("")
     const [avatar, setAvatar] = useState("")
-
+    const progress = 20
     // const handleFileSelected = (e: React.ChangeEvent<HTMLInputElement>): void => {
     //     const files = Array.from(e.target.files)
     //     console.log("files:", files)
     //   }
   return (
-      <form action="" className='register'>
+      <form action="" className='register1'>
           <div className="r-header">
           <h1>Hi, Welcome on Slick</h1>
           <h3>Let's Set up your slicky Profile</h3>
-          <ProgressBar animated striped now={20} label={"20%"} />
+          <ProgressBar animated striped now={progress} label={`${progress}%`} />
           </div>
             <div className="r-field">
                 <label htmlFor="">Fisrt Name</label>
@@ -66,7 +66,7 @@ function Register_one() {
                 <input className='r-r-f-import' type="file" name="file"/>
                 <span className="requiered"></span>
             </div>
-            <button className='r-form-btn' type="submit">Next &#8680;</button>
+            <button className='r-form-next r-btn' type="submit">Next &#8680;</button>
       </form> 
   )
 }

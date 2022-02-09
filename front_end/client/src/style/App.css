@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
 }
+:root{
+  --blue: #2384b1
+}
 @font-face {
   font-family: nova;
   src: url(../font/GILLSANSNOVA.TTF);
@@ -171,11 +174,18 @@ form button img {
 /* registration */
 
 .register {
-  display: grid;
-  grid-template-columns: 1fr;
   font-family: nova;
   height: 90vh;
   overflow: scroll;
+}
+.register1{
+  display: grid;
+  grid-template-columns: 1fr;
+
+}
+.register2{
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -239,25 +249,67 @@ form button img {
   content: 'Select some files';
   display: inline-block;
   text-align: center;
-  background: #2384b1;
+  background: var(--blue);
   color: #fff;
   border-radius: .22rem;
   padding: 1rem .5rem;
   outline: none;
-  -webkit-user-select: none;
+  /* -webkit-user-select: none; */
   cursor: pointer;
   font-weight: 700;
 }
 .r-r-f-import:active::before {
-  background: #2384b1;
+  background: var(--blue);
 }
-.r-form-btn{
-  background: #2384b1;
+.r-btn{
+  background: var(--blue);
   color: #fff;
   padding: .5rem 1rem;
   font-size: 1rem;
   font-weight: bold;
   border: none;
   border-radius: .3rem;
+  margin: auto;
+}
+.r-form-next{
   margin: auto 2rem 3rem auto;
+
+}
+
+.r-verify{
+ display: flex;
+ flex-direction: column;
+}
+.r-verify button{
+  margin: 1rem auto;
+}
+
+.r-send-code{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 2rem auto;
+}
+.r-send-code h3{
+  font-size: 1.2rem;
+}
+.r-send-code h4{
+  font-size: 1.1rem;
+}
+
+.r-received-code{
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+}
+.r-received-code >*{
+  margin: 1rem auto;
+}
+.r-received-code input{
+  border-radius: 2rem;
+  width: 6rem;
+  height: 3rem;
+  border: solid #ccc;
+  box-shadow: 0 0 5px #ccc;
+  text-align: center;
 }
