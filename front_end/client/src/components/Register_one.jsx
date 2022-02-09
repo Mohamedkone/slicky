@@ -15,7 +15,7 @@ function Register_one() {
     //     console.log("files:", files)
     //   }
   return (
-      <form action="" className='register1'>
+      <form action="" className='register register1'>
           <div className="r-header">
           <h1>Hi, Welcome on Slick</h1>
           <h3>Let's Set up your slicky Profile</h3>

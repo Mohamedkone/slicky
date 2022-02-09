@@ -1,4 +1,5 @@
 import React from 'react';
+import '../style/App.css'
 import accept from '../assets/accept.svg'
 import denied from '../assets/denied.svg'
 function ValidPop(props) {

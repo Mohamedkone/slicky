@@ -2,7 +2,7 @@ import React from 'react';
 
 function Register_two() {
   return (
-      <div className='register2'>
+      <div className='register register2'>
           <div className="r-header">
             <h1>Almost there</h1>
             <h3>Now let's verify your infos</h3>

@@ -2,7 +2,7 @@ import React from 'react';
 
 function Register_three() {
   return (
-      <div className='register3'>
+      <div className='register register3'>
           <div className="r-header">
               <h1>Last step</h1>
               <h3>Terms Of Uses</h3>
