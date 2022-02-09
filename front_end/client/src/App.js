@@ -9,7 +9,7 @@ import 'firebase/auth';
 
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
-import User from './pages/User';
+import Registration from './pages/Registration';
 import Convo from './pages/Convo';
 import Message from './pages/Message';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -28,9 +28,9 @@ const firestore = firebase.firestore();
 
 
 function App() {
-
+  
   const [user] = useAuthState(auth);
-  const main = user ? <User auth = {auth} firestore={firestore}/> : <SignIn auth={auth}/>
+  const main = user ? <Registration auth = {auth} firestore={firestore}/> : <SignIn auth={auth}/>
   return (
     <div className="App">
 

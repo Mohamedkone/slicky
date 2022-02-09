@@ -1,6 +1,10 @@
-import React from 'react';
-
+import React, {useState} from 'react';
 function Register_three() {
+    let [set,setSet] = useState("disabled")
+const check=(e)=>{
+e.target.checked==true? setSet("") : setSet("disabled")
+}
+
   return (
       <div className='register register3'>
           <div className="r-header">
@@ -36,11 +40,11 @@ function Register_three() {
             </p>
           </div>
           <div className="r-check-terms">
-          <input type="checkbox" name="" id="terms" />
-          <label htmlFor="checkbox">Yes, I accept the terms and conditions to use this
+          <input type="checkbox" name="" id="terms" onChange={(e)=>check(e)}/>
+          <label htmlFor="checkbox" >Yes, I accept the terms and conditions to use this
           this website or app</label>
           </div>
-          <button className='r-btn r-finish'>Done</button>
+          <button className='r-btn r-finish' id={`btn-${set}`} disabled={set}>Done</button>
       </div>
   )
 }

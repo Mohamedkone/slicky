@@ -9,7 +9,7 @@ function Convo(props) {
     let ok = props.auth
   return (
       <div>
-          <Nav title={"Conversation"} option={Option}/>
+          <Nav title={"Conversation"} option={Option} decision={true}/>
           <Card />
           <SignOut auth={ok}/>
       </div>

@@ -8,7 +8,7 @@ function Message(props) {
     let ok = props.auth
   return (
       <div>
-          <Nav title={"Mike Tyson"} option={option}/>
+          <Nav title={"Mike Tyson"} option={option} decision={true}/>
           <Chat auth={props.auth} firestore={props.firestore}/>
           <SignOut auth={ok}/>
       </div>
