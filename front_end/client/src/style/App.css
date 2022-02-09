@@ -334,3 +334,12 @@ form button img {
   font-weight: bold;
   margin-left: .1rem;
 }
+
+.r-valid-pop{
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+.r-v-p-accept{background: #468837;}
+.r-v-p-denied{background: #b92b2b;}
