@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input';
-import ProgressBar from 'react-bootstrap/ProgressBar'
 
 function Register_one() {
     const [firstName, setFirstName] = useState("")
@@ -11,7 +10,6 @@ function Register_one() {
     const [password, setPassword] = useState("")
     const [passwordVer, setPasswordVer] = useState("")
     const [avatar, setAvatar] = useState("")
-    const progress = 20
     // const handleFileSelected = (e: React.ChangeEvent<HTMLInputElement>): void => {
     //     const files = Array.from(e.target.files)
     //     console.log("files:", files)
@@ -21,7 +19,6 @@ function Register_one() {
           <div className="r-header">
           <h1>Hi, Welcome on Slick</h1>
           <h3>Let's Set up your slicky Profile</h3>
-          <ProgressBar animated striped now={progress} label={`${progress}%`} />
           </div>
             <div className="r-field">
                 <label htmlFor="">Fisrt Name</label>

@@ -313,3 +313,24 @@ form button img {
   box-shadow: 0 0 5px #ccc;
   text-align: center;
 }
+
+.r-check-terms {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto;
+}
+.terms-container{
+  height: 30vh;
+  width: 80vw;
+  margin: auto;
+  overflow: scroll;
+  border: solid #999;
+  border-radius: .2rem;
+  padding: 1rem;
+}
+.r-check-terms label{
+  font-size: .6rem;
+  font-weight: bold;
+  margin-left: .1rem;
+}
