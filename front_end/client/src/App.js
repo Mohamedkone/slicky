@@ -9,8 +9,10 @@ import 'firebase/auth';
 
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
+import User from './pages/User';
 import Convo from './pages/Convo';
 import Message from './pages/Message';
+
 
 firebase.initializeApp({
   apiKey: "AIzaSyCAbFmgXlgfntlxF-oQN4R1v6Jw6pctPwQ",
@@ -28,7 +30,7 @@ const firestore = firebase.firestore();
 function App() {
 
   const [user] = useAuthState(auth);
-  const main = user ? <Message auth = {auth} firestore={firestore}/> : <SignIn auth={auth}/>
+  const main = user ? <User auth = {auth} firestore={firestore}/> : <SignIn auth={auth}/>
   return (
     <div className="App">
 
