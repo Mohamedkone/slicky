@@ -12,7 +12,7 @@ import { useCollectionData } from 'react-firebase-hooks/firestore';
 import User from './pages/User';
 import Convo from './pages/Convo';
 import Message from './pages/Message';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 firebase.initializeApp({
   apiKey: "AIzaSyCAbFmgXlgfntlxF-oQN4R1v6Jw6pctPwQ",
