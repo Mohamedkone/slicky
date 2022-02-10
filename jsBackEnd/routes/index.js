@@ -5,6 +5,6 @@ const controllers = require('../controllers')
 
 
 // router.get('/', controllers.trial)
-router.get('/', controllers.trys)
+router.post('/', controllers.addtrys)
 
 module.exports = router
