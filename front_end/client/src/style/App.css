@@ -380,3 +380,29 @@ form button img {
 .r-v-p-denied {
   background: #b92b2b;
 }
+.video-body{
+  display: flex;
+  flex-direction: column;
+}
+.videos{
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+}
+video{
+  background: #000;
+  
+}
+.video-body button{
+  margin: 1rem auto;
+}
+.video-body input{
+  margin: auto;
+}
+.v-btn1{
+  background-color: var(--red);
+}
+.v-btn2{
+  background-color: var(--blue);
+}

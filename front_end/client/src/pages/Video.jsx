@@ -1,8 +1,7 @@
-import React, {useRef} from 'react'
+import React from 'react'
+import Nav from '../components/Nav'
 
 function Video() {
-    const webcamVid = useRef()
-    const remoteVid = useRef()
     const servers = {
         iceServers:[
         {
@@ -35,34 +34,30 @@ function Video() {
     }
 
   return (
-    <div>
-         <h2>1. Start your Webcam</h2>
+      <div className='video-body'>
+        <Nav title={"Video Chat"}  />
     <div className="videos">
       <span>
         <h3>Local Stream</h3>
-        <video id="webcamVideo" ref={webcamVid}  autoPlay playsInline></video>
+        <video id="webcamVideo"  autoPlay playsInline></video>
       </span>
       <span>
         <h3>Remote Stream</h3>
-        <video id="remoteVideo" ref={remoteVid} autoPlay playsInline></video>
+        <video id="remoteVideo" autoPlay playsInline></video>
       </span>
 
 
     </div>
 
-    <button id="webcamButton" onClick={()=>startWebcam()}>Start webcam</button>
-    <h2>2. Create a new Call</h2>
-    <button id="callButton" disabled>Create Call (offer)</button>
+    <button id="webcamButton" className='r-btn v-btn1' onClick={()=>startWebcam()}>Start webcam</button>
+    <button id="callButton" className='r-btn v-btn2' disabled>Create Call (offer)</button>
 
-    <h2>3. Join a Call</h2>
-    <p>Answer the call from a different browser window or device</p>
     
-    <input id="callInput" />
-    <button id="answerButton" disabled>Answer</button>
+    <input id="callInput" placeholder='Chat Key Generator...'/>
+    <button id="answerButton" className='r-btn v-btn1' disabled>Answer</button>
 
-    <h2>4. Hangup</h2>
 
-    <button id="hangupButton" disabled>Hangup</button>
+    <button id="hangupButton" className='r-btn v-btn2' disabled>Hangup</button>
     </div>
   )
 }
