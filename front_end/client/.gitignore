@@ -5,12 +5,18 @@
 /.pnp
 .pnp.js
 package-lock.json
+.env.local
+.env
 
 # testing
 /coverage
 
 # production
 /build
+.firebaserc
+firebase.json
+
+
 
 # misc
 .DS_Store
