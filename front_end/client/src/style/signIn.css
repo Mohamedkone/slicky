@@ -10,7 +10,7 @@
     font-family: 'Sriracha', cursive;
     color: #fff;
     font-size: min(20vw, 5rem);
-
+    text-align: center;
 }
 .sign-in-btn{
     width: min(70vw, 40rem);

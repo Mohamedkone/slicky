@@ -15,14 +15,14 @@ function Register_one() {
     //     const files = Array.from(e.target.files)
     //     console.log("files:", files)
     //   }
-    useEffect(()=>{
-        axios.post('http://localhost:3001/').then(res =>{
-            // SetList(res.data)
-            // SetNbr(res.data.length)
-            console.log(res)
+    // useEffect(()=>{
+    //     axios.post('http://localhost:3001/').then(res =>{
+    //         // SetList(res.data)
+    //         // SetNbr(res.data.length)
+    //         console.log(res)
                     
-          })
-        },[])
+    //       })
+    //     },[])
   return (
       <form method='POST' action="/" className='register register1'>
           <div className="r-header">
@@ -68,12 +68,12 @@ function Register_one() {
                 <input className='' type="text" value={passwordVer} onChange={()=>setPasswordVer()} />
                 <span className="requiered">This is requiered</span>
             </div>
-            <button type="submit">click</button>
-            {/* <div className="r-field">
+            {/* <button type="submit">click</button> */}
+            <div className="r-field">
                 <label htmlFor="file" className='r-upload' >Choose Profile image</label>
                 <input className='r-r-f-import' type="file" name="file"/>
                 <span className="requiered"></span>
-            </div> */}
+            </div>
             
       </form> 
   )
