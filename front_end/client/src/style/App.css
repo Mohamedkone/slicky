@@ -245,8 +245,13 @@ a:visited .c-2c-name{
 .chat-send {
   background: #eee;
   height: 5vh;
-
   padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+a .videoCall {
+  width: 50px;
 }
 form {
   display: flex;
