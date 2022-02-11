@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Card() {
+function Card(props) {
     let status =[1,3,1,1,0,2,2,3,3,1]
     let friend=['Allen Iverson', 'M.Jordan','Elon Musk', 'Lionel Messi',
                 'Gaming Group', 'Michelle Obama','Rihanna','Cristiano Ronaldo',
@@ -8,7 +8,7 @@ function Card() {
     let time = ['32sec','5min','16min','22min','8h','8h','1day','1day','1day','2day',]
     let card = []
     let i = 0
-    for(i = 0; i<10; i++){
+    for(i = 0; i<props.amount; i++){
         card.push(
             <div key={i} className="c-container">
             <div className={`c-c-avatar status${status[i]}`}>

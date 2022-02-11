@@ -124,6 +124,43 @@ nav img {
   align-self: flex-end;
 }
 
+/* SideCard */
+
+.side-card h1{
+  padding-left: 1rem;
+  padding: .5rem 0 .5rem 1rem;
+  box-shadow: 0 5px 4px #ccc;
+}
+
+.s-c-g-option{
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  padding-left: 2rem;
+  box-shadow: 0 3px 4px #ccc;
+}
+.s-c-g-option h3{
+  margin-left: 1rem;
+}
+.s-c-g-option img{
+  width: 2rem;
+}
+
+.min-convo{
+  zoom: .7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /* Chat */
 .display-msg {
   height: 75vh;

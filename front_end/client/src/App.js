@@ -14,6 +14,7 @@ import Convo from './pages/Convo';
 import Message from './pages/Message';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Video from './pages/Video';
+import SideCard from './components/SideCard';
 
 firebase.initializeApp({
   apiKey: "AIzaSyCAbFmgXlgfntlxF-oQN4R1v6Jw6pctPwQ",
@@ -33,12 +34,11 @@ const firestore = firebase.firestore();
 function App() {
   
   const [user] = useAuthState(auth);
-  // const main = user ? <Video auth = {auth} firestore={firestore}/> : <SignIn auth={auth}/>
+  const main = user ? <SideCard auth = {auth} firestore={firestore}/> : <SignIn auth={auth}/>
   return (
     <div className="App">
 
-      <Video auth = {auth} firestore={firestore}/>
-        {/* {main} */}
+        {main}
  
 
     </div>
