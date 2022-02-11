@@ -8,9 +8,11 @@ import SignOut from './SignOut'
 
 function SideCard(props) {
   return (
-    <div className='side-card'>
+    <div className={`side-card-hide`}>
+        <div className="s-c-user">
         <h1>Kevin Roger</h1>
-        <div className='s-card-group'>
+        </div>
+        <div className='s-c-group'>
         <div className="s-c-g-option">
             <img src={Chat} alt="" />
             <h3>Messages</h3>
@@ -32,7 +34,7 @@ function SideCard(props) {
             <Card amount = {5} />
         </div>
         <div className="logOut">
-            <SignOut auth={props.auth}/>
+            {/* <SignOut auth={props.auth}/> */}
         </div>
     </div>
   )

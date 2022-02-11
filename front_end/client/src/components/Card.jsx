@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Card(props) {
     let status =[1,3,1,1,0,2,2,3,3,1]
@@ -15,6 +16,7 @@ function Card(props) {
                 <img src="" alt="" />
             </div>
             <div className="c-c-content">
+            <Link to={"/message"}>
                 <h3 className="c-2c-name">{friend[i]}</h3>
                 <div className="c-2c-message">
                     <p>
@@ -22,6 +24,7 @@ function Card(props) {
                       You Owe me 20$ bro!!!
                     </p>
                 </div>
+        </Link>
             </div>
             <div className='c-2c-time'>
                 <span>{time[i]}</span>

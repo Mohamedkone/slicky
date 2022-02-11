@@ -7,13 +7,10 @@ import SignOut from '../components/SignOut';
 import SideCard from '../components/SideCard';
 
 function Convo(props) {
-    let ok = props.auth
   return (
       <div>
-          {/* <Nav title={"Conversation"} option={Option} decision={true}/>
-          <Card />
-          <SignOut auth={ok}/> */}
-          <SideCard amount = {10}/>
+          <Card amount={10} auth = {props.auth} firestore={props.firestore} />
+          
       </div>
   )
 }
