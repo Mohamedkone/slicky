@@ -44,8 +44,9 @@ function App() {
   const cvo = user ? <Convo auth = {auth} firestore={firestore}/> : <SignIn auth={auth}/>
   const msg = user ? <Message auth = {auth} firestore={firestore}/> : <SignIn auth={auth}/>
   const emit = user? true : false
+  const emit2 = user && window.location.href !== "http://localhost:3000/register"? true : false
   const [side, setSide] = useState("hide")
-
+  console.log(emit)
   // function SignOut(props) {
   //   return props.auth.currentUser && (
   //     <button className="sign-out r-btn" onClick={() => props.auth.signOut()}>Sign Out</button>
@@ -58,12 +59,13 @@ function App() {
           <h2>convo</h2>
           {decision?<div className="option1"><img src="" alt="" /></div>:<div></div>}
       </nav>:""}
-      {emit? <div className={`side-card-${side}`}>
+      {emit2? <div className={`side-card-${side}`}>
         <div className="s-c-user">
         <h1>Kevin Roger</h1>
         <div className="close" onClick={()=>setSide("hide")}><img src={Close}></img></div>
         </div>
         <div className='s-c-group'>
+          
         <div className="s-c-g-option">
             <img src={Chats} alt="" />
             <h3>Messages</h3>
@@ -93,6 +95,7 @@ function App() {
       <Routes >
         <Route path='/' element={cvo} />
         <Route path='/message' element={msg} />
+        <Route path='/register' element={<Registration />} />
       </Routes>
       </BrowserRouter>
         {/* {main} */}
