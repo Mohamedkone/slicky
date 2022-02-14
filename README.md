@@ -12,10 +12,11 @@
 ***
 
 ### ***Technology Used***
-* Technology 1
-* Technology 2
-  * Sub-Technology
-* Technology 4
+* MERN
+* Firebase
+  * firebase database
+* WebRTC
+* Python
 
 ### ***Getting Started***
 
