@@ -1,4 +1,4 @@
-import React from 'react';
+import React , { createContext, useContext} from 'react';
 import Nav from '../components/Nav'
 import option from '../assets/video-camera.svg'
 import Chat from '../components/Chat';
@@ -8,9 +8,7 @@ function Message(props) {
     let ok = props.auth
   return (
       <div>
-          <Nav title={"Mike Tyson"} option={option} decision={true}/>
           <Chat auth={props.auth} firestore={props.firestore}/>
-          <SignOut auth={ok}/>
       </div>
   )
 }

@@ -27,7 +27,6 @@ function Registration(props) {
 
   return (
       <div className='register1'>
-          <Nav title={"Registering"} option={Dots} decision={false}/>
           {/* <SignOut auth={ok}/> */}
           <ProgressBar animated striped now={progress} label={`${progress}% Done`} />
           {page==1?<Register_one />:""}

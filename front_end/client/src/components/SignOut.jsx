@@ -5,7 +5,7 @@ import React from 'react';
 
 function SignOut(props) {
     return props.auth.currentUser && (
-      <button className="sign-out" onClick={() => props.auth.signOut()}>Sign Out</button>
+      <button className="sign-out r-btn" onClick={() => props.auth.signOut()}>Sign Out</button>
     )
   }
 

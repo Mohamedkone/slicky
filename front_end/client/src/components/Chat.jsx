@@ -2,6 +2,8 @@ import { useState } from "react";
 import firebase, { auth } from "firebase";
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 import Asend from '../assets/send.svg'
+import { Link } from "react-router-dom";
+import Video from "../assets/video-camera.svg"
 
 function Chat(props) {
       
@@ -27,6 +29,9 @@ function Chat(props) {
   
       </div>
       <div className="chat-send">
+        <a href="https://video-slickys.web.app/">
+        <div className="videoCall" ><img src={Video} alt="" /></div>
+        </a>
       <form onSubmit={sendMessage}>
         <textarea className="msg-i" value={formValue} rows='1' onChange={(e)=> setFormValue(e.target.value)} />
         <button disabled={ formValue === ""?"disable":""}><img src={Asend} alt="" /></button>

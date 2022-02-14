@@ -14,6 +14,14 @@ body {
   max-height: 100vh;
   overflow-y: hidden;
 }
+a>*, a>*>*{
+  color: #000;
+  text-decoration:double;
+}
+a:visited>*, a:visited>*>*{
+  color: #000;
+  text-decoration:double;
+}
 
 .hide {
   display: none;
@@ -109,9 +117,18 @@ nav img {
   border-radius: 7.5px;
 }
 
-.c-2c-name {
+a .c-2c-name {
   font-family: nova;
   font-weight: 300;
+  color: #000;
+  text-decoration: none;
+}
+a:visited{
+  text-decoration: none;
+  color: #000;
+}
+a:visited .c-2c-name{
+  text-decoration: none;
 }
 .c-2c-message,
 .c-2c-time {
@@ -123,6 +140,77 @@ nav img {
 .c-2c-time {
   align-self: flex-end;
 }
+
+/* SideCard */
+.side-card-show{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 00vw;
+  background: #fff ;
+  border-right: solid #ccc;
+  z-index: 10;
+}
+.side-card-show{width: 90vw;}
+.side-card-hide>*{
+  display: none;
+}
+.side-card-show>*{
+  display: flex;
+  justify-content: space-around;
+}
+.s-c-user{
+  height: 10vh;
+  padding-left: 1rem;
+  padding: .5rem 0 .5rem 1rem;
+  box-shadow: 0 5px 4px #ccc;
+  align-items: center;
+}
+.close{
+  width: 2rem;
+}
+.s-c-group{
+  flex-direction: column;
+  height: 40vh;
+}
+.s-c-g-option{
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  padding-left: 2rem;
+  box-shadow: 0 3px 4px #ccc;
+}
+.s-c-g-option h3{
+  margin-left: 1rem;
+}
+.s-c-g-option img{
+  width: 2rem;
+}
+
+.min-convo{
+  zoom: .7;
+}
+.logOut{
+  display: flex;
+  box-shadow: 0 0 4px #ccc;
+  text-align: center;
+  height: 7.5vh;
+
+}
+.sign-out{
+  background-color: var(--red);
+}
+
+
+
+
+
+
+
+
+
 
 /* Chat */
 .display-msg {
@@ -157,8 +245,13 @@ nav img {
 .chat-send {
   background: #eee;
   height: 5vh;
-
   padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+a .videoCall {
+  width: 50px;
 }
 form {
   display: flex;
@@ -379,4 +472,30 @@ form button img {
 }
 .r-v-p-denied {
   background: #b92b2b;
+}
+.video-body{
+  display: flex;
+  flex-direction: column;
+}
+.videos{
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+}
+video{
+  background: #000;
+  
+}
+.video-body button{
+  margin: 1rem auto;
+}
+.video-body input{
+  margin: auto;
+}
+.v-btn1{
+  background-color: var(--red);
+}
+.v-btn2{
+  background-color: var(--blue);
 }
